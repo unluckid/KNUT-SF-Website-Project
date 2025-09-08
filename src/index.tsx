@@ -7,3 +7,4 @@ createRoot(document.getElementById("app") as HTMLElement).render(
     <Index1 />
   </StrictMode>,
 );
+//d
