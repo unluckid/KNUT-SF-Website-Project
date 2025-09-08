@@ -3,43 +3,12 @@ import { useState } from "react";
 export const Index = (): JSX.Element => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  // Data for the card gallery section
-  const galleryCards = [
-    {
-      id: 1,
-      image: "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0@2x.png",
-      description: "설명 넣는 칸",
-      position: { top: 43, left: 0 },
-    },
-    {
-      id: 2,
-      image:
-        "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-1@2x.png",
-      description: "설명 넣는 칸",
-      position: { top: 43, left: 51 },
-    },
-    {
-      id: 3,
-      image:
-        "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
-      description: "설명 넣는 칸",
-      position: { top: 0, left: 101 },
-    },
-    {
-      id: 4,
-      image:
-        "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
-      description: "설명 넣는 칸",
-      position: { top: 43, left: 159 },
-    },
-    {
-      id: 5,
-      image:
-        "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
-      description: "설명 넣는 칸",
-      position: { top: 43, left: 216 },
-    },
-  ];
+ // Data for navigation menu
+  const menuItems = [
+    { id: 1, label: "Menu1", position: { left: 160 } },
+    { id: 2, label: "Menu1", position: { left: 415 } },
+    { id: 3, label: "Menu1", position: { left: 671 } },
+  ]
 
   // Data for the main content cards
   const mainCards = [
@@ -65,13 +34,44 @@ export const Index = (): JSX.Element => {
       size: "large",
     },
   ];
-
-  // Data for navigation menu
-  const menuItems = [
-    { id: 1, label: "Menu1", position: { left: 160 } },
-    { id: 2, label: "Menu1", position: { left: 415 } },
-    { id: 3, label: "Menu1", position: { left: 671 } },
-  ];
+    // Data for the card gallery section
+    const galleryCards = [
+        {
+            id: 1,
+            image: "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0@2x.png",
+            description: "설명 넣는 칸",
+            position: { top: 43, left: 0 },
+        },
+        {
+            id: 2,
+            image:
+                "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-1@2x.png",
+            description: "설명 넣는 칸",
+            position: { top: 43, left: 51 },
+        },
+        {
+            id: 3,
+            image:
+                "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
+            description: "설명 넣는 칸",
+            position: { top: 0, left: 101 },
+        },
+        {
+            id: 4,
+            image:
+                "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
+            description: "설명 넣는 칸",
+            position: { top: 43, left: 159 },
+        },
+        {
+            id: 5,
+            image:
+                "https://c.animaapp.com/WSePZwLR/img/unsplash-dghy9kgdtj0-4@2x.png",
+            description: "설명 넣는 칸",
+            position: { top: 43, left: 216 },
+        },
+    ];
+  ;
 
   // Data for pagination dots
   const paginationDots = [
@@ -148,11 +148,17 @@ export const Index = (): JSX.Element => {
                   />
                 </button>
 
-                <img
-                  className="absolute w-[54px] h-[54px] top-6 left-[39px] object-cover"
-                  alt="KNUT logo"
-                  src="https://c.animaapp.com/WSePZwLR/img/knut-logo.svg"
-                />
+                 <a
+                                  className="absolute w-[54px] h-[54px] top-6 left-[39px] hover:opacity-80 transition-opacity rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-20"
+                 aria-label="KNUT 홈페이지로 이동"
+                 href="https://www.ut.ac.kr"
+                              >
+
+                      <img
+                       className="w-full h-full object-cover"
+                       alt="KNUT logo"
+                       src="https://c.animaapp.com/WSePZwLR/img/knut-logo.svg" />
+                      </a>
               </header>
             </div>
 
@@ -276,13 +282,14 @@ export const Index = (): JSX.Element => {
               src="https://c.animaapp.com/WSePZwLR/img/image-background.png"
             />
           </div>
-
-          <header className="w-[1920px] h-[110px] top-0 bg-[#2c2c2c57] absolute left-0">
+            <header className="w-[1920px] h-[110px] top-0 bg-[#2c2c2c57] absolute left-0">
+                      <a href= "https://www.ut.ac.kr">
             <img
               className="absolute w-[523px] h-[110px] top-0 left-0"
               alt="KNUT logo"
               src="https://c.animaapp.com/WSePZwLR/img/knut-logo-1.png"
             />
+                  </a>
 
             <nav className="absolute w-[1397px] h-[110px] top-0 left-[523px]">
               {menuItems.map((item) => (
