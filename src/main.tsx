@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Index1 } from "./screens/IndexF";
+import { Index } from "./screens/Index/index.tsx";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
-    <Index1 />
+    <Index />
   </StrictMode>,
 );
